@@ -1,5 +1,6 @@
 ---
 import Navigation from "../component/Navigation.astro";
+import Footer from "../component/Footer.astro";
 import "../style/global.css";
 const skills = ["HTML", "CSS", "JavaScript", "Vue3", "Astro", "Writing Docs"];
 ---
@@ -28,5 +29,6 @@ const skills = ["HTML", "CSS", "JavaScript", "Vue3", "Astro", "Writing Docs"];
     <ul>
       {skills.map((skill) => <li class="skill">{skill}</li>)}
     </ul>
+    <Footer />
   </body>
 </html>
