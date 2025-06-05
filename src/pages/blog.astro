@@ -1,23 +1,25 @@
 ---
-
+import "../style/global.css";
+const title = "博客title";
+const skills = ["HTML", "CSS", "JavaScript", "Vue3", "Astro", "Writing Docs"];
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-        <a href="/">首页</a>
-        <a href="/about/">关于</a>
-        <a href="/blog">博客</a>
-		<h1>Blog</h1>
-        <ul>
-            <li><a href="/posts/astro">astro.md</a></li>
-            <li><a href="/posts/base64">base64.md</a></li>
-        </ul>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a href="/">首页</a>
+    <a href="/about/">关于</a>
+    <a href="/blog">博客</a>
+    <h1>Blog</h1>
+    <ul>
+      <li><a href="/posts/astro">astro.md</a></li>
+      <li><a href="/posts/base64">base64.md</a></li>
+    </ul>
+  </body>
 </html>
