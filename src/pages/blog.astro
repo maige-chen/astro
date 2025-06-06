@@ -1,29 +1,20 @@
 ---
-import Header from "../component/Header.astro";
-import Footer from "../component/Footer.astro";
-import "../style/global.css";
+import Layout from "../layout/Layout.astro";
+const allPosts = Object.values(import.meta.glob("./posts/*.md", {eager: true}));
 const title = "博客title";
-const skills = ["HTML", "CSS", "JavaScript", "Vue3", "Astro", "Writing Docs"];
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-  </head>
-  <body>
-    <Header />
-    <h1>Blog</h1>
-    <ul>
-      <li><a href="/posts/astro">astro.md</a></li>
-      <li><a href="/posts/base64">base64.md</a></li>
-    </ul>
-    <Footer />
-    <script>
-      import "../script/menu.js";
-    </script>
-  </body>
-</html>
+<Layout pageTitle={title}>
+  <ul>
+    <li><a href="/posts/astro">astro.md</a></li>
+    <li><a href="/posts/base64">base64.md</a></li>
+
+    {
+      allPosts.map((post: any) => (
+        <li>
+          <a href={post.url}>{post.frontmatter.title}</a>
+        </li>
+      ))
+    }
+  </ul>
+</Layout>

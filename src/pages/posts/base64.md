@@ -1,3 +1,8 @@
+---
+layout: ../../layout/Markdown.astro
+title: "base64 编码"
+---
+
 # base64 编码 [RFC2045~2049](https://www.rfc-editor.org/info/rfc2045)
 
 - Base64就是一种基于64个可打印字符来表示二进制数据的方法

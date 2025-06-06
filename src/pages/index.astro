@@ -1,23 +1,8 @@
 ---
-import Header from "../component/Header.astro";
-import Footer from "../component/Footer.astro";
-import "../style/global.css";
+import Layout from "../layout/Layout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <Header />
-    <h1>Dear Astro</h1>
-    <Footer />
-    <script>
-      import "../script/menu.js";
-    </script>
-  </body>
-</html>
+<Layout pageTitle="首页">
+  <h2>我超棒的博客副标题</h2>
+  slot中显示
+</Layout>

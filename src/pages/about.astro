@@ -1,37 +1,20 @@
 ---
-import Header from "../component/Header.astro";
-import Footer from "../component/Footer.astro";
-import "../style/global.css";
+import Layout from "../layout/Layout.astro";
 const skills = ["HTML", "CSS", "JavaScript", "Vue3", "Astro", "Writing Docs"];
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-    <style>
-      h1 {
-        color: purple;
-        font-size: 4rem;
-      }
-      .skill {
-        color: green;
-        font-weight: bold;
-      }
-    </style>
-  </head>
-  <body>
-    <Header />
-    <h1>About</h1>
-    <ul>
-      {skills.map((skill) => <li class="skill">{skill}</li>)}
-    </ul>
-    <Footer />
-    <script>
-      import "../script/menu.js";
-    </script>
-  </body>
-</html>
+<style>
+  h1 {
+    color: purple;
+    font-size: 4rem;
+  }
+  .skill {
+    color: green;
+    font-weight: bold;
+  }
+</style>
+<Layout pageTitle="About">
+  <ul>
+    {skills.map((skill) => <li class="skill">{skill}</li>)}
+  </ul>
+</Layout>

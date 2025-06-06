@@ -1,4 +1,5 @@
 ---
+layout: ../../layout/Markdown.astro
 title: "astro安装使用教程"
 pubDate: 2025-06-05
 description: "这是我 Astro 博客的第一篇文章。"
