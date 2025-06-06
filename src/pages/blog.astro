@@ -1,5 +1,5 @@
 ---
-import Navigation from '../component/Navigation.astro';
+import Header from "../component/Header.astro";
 import Footer from "../component/Footer.astro";
 import "../style/global.css";
 const title = "博客title";
@@ -15,12 +15,15 @@ const skills = ["HTML", "CSS", "JavaScript", "Vue3", "Astro", "Writing Docs"];
     <title>{title}</title>
   </head>
   <body>
-    <Navigation />
+    <Header />
     <h1>Blog</h1>
     <ul>
       <li><a href="/posts/astro">astro.md</a></li>
       <li><a href="/posts/base64">base64.md</a></li>
     </ul>
     <Footer />
+    <script>
+      import "../script/menu.js";
+    </script>
   </body>
 </html>

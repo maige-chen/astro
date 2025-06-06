@@ -1,5 +1,5 @@
 ---
-import Navigation from "../component/Navigation.astro";
+import Header from "../component/Header.astro";
 import Footer from "../component/Footer.astro";
 import "../style/global.css";
 const skills = ["HTML", "CSS", "JavaScript", "Vue3", "Astro", "Writing Docs"];
@@ -24,11 +24,14 @@ const skills = ["HTML", "CSS", "JavaScript", "Vue3", "Astro", "Writing Docs"];
     </style>
   </head>
   <body>
-    <Navigation />
+    <Header />
     <h1>About</h1>
     <ul>
       {skills.map((skill) => <li class="skill">{skill}</li>)}
     </ul>
     <Footer />
+    <script>
+      import "../script/menu.js";
+    </script>
   </body>
 </html>

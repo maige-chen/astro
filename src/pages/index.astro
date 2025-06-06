@@ -1,5 +1,5 @@
 ---
-import Navigation from "../component/Navigation.astro";
+import Header from "../component/Header.astro";
 import Footer from "../component/Footer.astro";
 import "../style/global.css";
 ---
@@ -13,8 +13,11 @@ import "../style/global.css";
     <title>Astro</title>
   </head>
   <body>
-    <Navigation />
+    <Header />
     <h1>Dear Astro</h1>
     <Footer />
+    <script>
+      import "../script/menu.js";
+    </script>
   </body>
 </html>
